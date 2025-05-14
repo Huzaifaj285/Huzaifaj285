@@ -1,2 +1,32 @@
 Console.WriteLine("my name is huzaifa Javed");
 Console.WriteLine("my roll no 24-ST-28");
+public static double DivideNumbers(double a, double b)
+{
+    if (b == 0)
+    {
+        throw new DivideByZeroException("Cannot divide by zero");
+    }
+    return a / b;
+}
+```
+
+You can use this method like this:
+
+```
+public class Program
+{
+    public static void Main()
+    {
+        double a = 20;
+        double b = 10;
+        try
+        {
+            double quotient = DivideNumbers(a, b);
+            Console.WriteLine("The quotient of " + a + " and " + b + " is: " + quotient);
+        }
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
