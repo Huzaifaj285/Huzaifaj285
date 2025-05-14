@@ -1,8 +1,18 @@
 Console.WriteLine("my name is huzaifa Javed");
 Console.WriteLine("my roll no 24-ST-28");
+Division
+public static double DivideNumbers(double a, double b)
+{
+    if (b == 0)
+    {
+        throw new DivideByZeroException("Cannot divide by zero");
+    }
+    return a / b;
+
 public static int MultiplyNumbers(int a, int b)
 {
     return a * b;
+ Multiplication
 }
 ```
 
@@ -13,10 +23,25 @@ public class Program
 {
     public static void Main()
     {
+ Division
+        double a = 20;
+        double b = 10;
+        try
+        {
+            double quotient = DivideNumbers(a, b);
+            Console.WriteLine("The quotient of " + a + " and " + b + " is: " + quotient);
+        }
+        catch (DivideByZeroException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
+
         int a = 10;
         int b = 20;
         int product = MultiplyNumbers(a, b);
         Console.WriteLine("The product of " + a + " and " + b + " is: " + product);
     }
 }
-```
+Multiplication
