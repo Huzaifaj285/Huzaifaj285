@@ -1,2 +1,21 @@
 Console.WriteLine("my name is huzaifa Javed");
 Console.WriteLine("my roll no 24-ST-28");
+public static int SubtractNumbers(int a, int b)
+{
+    return a - b;
+}
+```
+
+You can use this method like this:
+
+```
+public class Program
+{
+    public static void Main()
+    {
+        int a = 20;
+        int b = 10;
+        int difference = SubtractNumbers(a, b);
+        Console.WriteLine("The difference between " + a + " and " + b + " is: " + difference);
+    }
+}
